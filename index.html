@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlowPay | Digital Wallet</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="toast" class="toast"></div>
+
+    <!-- Authentication Section -->
+    <section id="auth" class="auth">
+
+        <!-- Introduction -->
+        <div class="intro">
+
+            <a class="brand">
+                <i>F</i>
+                FlowPay
+            </a>
+
+            <div>
+
+                <p class="eyebrow">
+                    SMART MONEY, SIMPLIFIED
+                </p>
+
+                <h1>
+                    Move money<br>
+                    with confidence.
+                </h1>
+
+                <p>
+                    Pay bills, send money, and stay on top of every rupee—
+                    all in one secure wallet.
+                </p>
+
+            </div>
+
+            <div class="checks">
+                <span>✓ Instant transfers</span>
+                <span>✓ Budget smarter</span>
+                <span>✓ Payment history</span>
+            </div>
+
+        </div>
+
+        <!-- Authentication Side -->
+        <div class="auth-side">
+
+            <div class="auth-card">
+
+                <p class="eyebrow">
+                    WELCOME TO FLOWPAY
+                </p>
+
+                <h2 id="authTitle">
+                    Sign in to your wallet
+                </h2>
+
+                <p id="authText">
+                    Your money overview is waiting.
+                </p>
+
+                <!-- Login Form -->
+                <form id="loginForm">
+
+                    <label>
+                        Email
+                        <input
+                            id="loginEmail"
+                            type="email"
+                            required
+                            placeholder="you@example.com"
+                        >
+                    </label>
+
+                    <label>
+                        Password
+                        <input
+                            id="loginPassword"
+                            type="password"
+                            required
+                            placeholder="Enter password"
+                        >
+                    </label>
+
+                    <button class="primary">
+                        Sign in →
+                    </button>
+
+                    <p class="switch">
+                        New here?
+                        <button
+                            type="button"
+                            data-auth="signup"
+                        >
+                            Create an account
+                        </button>
+                    </p>
+
+                    <!-- Demo Login -->
+                    <div class="demo">
+                        <b>Admin demo</b>
+                        <br>
+                        <code>chakradharmandadapu@gmail.com</code>
+                        /
+                        <code>200809</code>
+                    </div>
+
+                </form>
+
+                <!-- Signup Form -->
+                <form id="signupForm" class="hidden">
+
+                    <label>
+                        Full name
+                        <input
+                            id="name"
+                            required
+                            placeholder="Your full name"
+                        >
+                    </label>
+
+                    <label>
+                        Email
+                        <input
+                            id="email"
+                            type="email"
+                            required
+                            placeholder="you@example.com"
+                        >
+                    </label>
+
+                    <label>
+                        Mobile number
+                        <input
+                            id="phone"
+                            required
+                            placeholder="9876543210"
+                        >
+                    </label>
+
+                    <label>
+                        Password
+                        <input
+                            id="password"
+                            type="password"
+                            minlength="4"
+                            required
+                            placeholder="Create password"
+                        >
+                    </label>
+
+                    <button class="primary">
+                        Create wallet →
+                    </button>
+
+                    <p class="switch">
+                        Already have an account?
+                        <button
+                            type="button"
+                            data-auth="login"
+                        >
+                            Sign in
+                        </button>
+                    </p>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Main Application -->
+    <section id="app" class="app hidden">
+
+        <!-- Sidebar -->
+        <aside>
+
+            <a class="brand">
+                <i>F</i>
+                FlowPay
+            </a>
+
+            <!-- User Profile -->
+            <div class="profile">
+
+                <div id="avatar" class="avatar">
+                    U
+                </div>
+
+                <div>
+                    <b id="sideName">
+                        User
+                    </b>
+
+                    <small id="sideRole">
+                        Wallet user
+                    </small>
+                </div>
+
+            </div>
+
+            <!-- Navigation -->
+            <nav id="nav"></nav>
+
+            <!-- Logout -->
+            <button id="logout" class="logout">
+                ↪ Log out
+            </button>
+
+            <p class="foot">
+                FlowPay Wallet v1.0
+                <br>
+                Fast. Simple. Secure.
+            </p>
+
+        </aside>
+
+        <!-- Main Content -->
+        <main>
+
+            <!-- Header -->
+            <header>
+
+                <div>
+
+                    <p id="kicker" class="eyebrow">
+                        MY WALLET
+                    </p>
+
+                    <h2 id="title">
+                        Dashboard
+                    </h2>
+
+                </div>
+
+                <span id="today"></span>
+
+            </header>
+
+            <!-- Dynamic Content -->
+            <div id="content"></div>
+
+        </main>
+
+    </section>
+
+    <!-- Modal -->
+    <div id="modal" class="modal hidden">
+
+        <div class="modal-card">
+
+            <button id="close" class="close">
+                ×
+            </button>
+
+            <div id="modalContent"></div>
+
+        </div>
+
+    </div>
+
+    <!-- JavaScript -->
+    <script src="app.js"></script>
+
+</body>
+
+</html>
